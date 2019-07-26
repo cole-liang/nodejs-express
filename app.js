@@ -16,6 +16,10 @@ bookRouter.route('/books').get((req, res) => {
   Books.find(query, (err, books) => (err ? res.send(err) : res.json(books)));
 });
 
+bookRouter.route('/books/:bookId').get((req, res) => {
+  Books.findById(req.params.bookId, (err, book) => (err ? res.send(err) : res.json(book)));
+});
+
 app.use('/api', bookRouter);
 
 app.get('/', (req, res) => {
