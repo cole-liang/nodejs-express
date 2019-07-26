@@ -23,6 +23,7 @@
   "homepage": "https://github.com/cole-liang/nodejs-express#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.6.6",
     "nodemon": "^1.19.1"
   },
   "devDependencies": {
