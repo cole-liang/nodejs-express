@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "lint-init": "eslint --init",
     "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/*Test.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,10 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0",
+    "should": "^13.2.3",
+    "sinon": "^7.3.2"
   },
   "nodemonConfig": {
     "restartable": "rs",
