@@ -25,7 +25,12 @@ function routers(Book) {
     .route('/books/:bookId')
     .get((req, res) => {
       const { book } = req;
-      return res.json(book);
+
+      const newBook = book.toJSON();
+      const genre = newBook.genre.replace(' ', '%20');
+      newBook.links = {};
+      newBook.links.findBooksByGenre = `http://${req.headers.host}/api/books/?genre=${genre}`;
+      return res.json(newBook);
     })
     .put((req, res) => {
       const { book } = req;
